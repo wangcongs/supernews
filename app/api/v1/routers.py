@@ -3,6 +3,6 @@ from fastapi import APIRouter
 from .endpoints import news
 
 
-api_router = APIRouter(prefix="/api/v1")
+api_router = APIRouter(prefix="/api")
 
 api_router.include_router(news.router, prefix="/news", tags=["新闻"])  # 挂载新闻路由

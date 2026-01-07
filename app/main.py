@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import settings
-# from app.api.v1.routers import api_router
+from app.api.v1.routers import api_router
 
 logger = logging.getLogger(__name__)
 
@@ -57,7 +57,7 @@ def create_app() -> FastAPI:
 	)
 
 	# 挂载版本化 API 路由
-	# app.include_router(api_router)
+	app.include_router(api_router)
 
 	
 	return app
